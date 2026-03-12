@@ -2,7 +2,7 @@ import { Elysia } from "elysia";
 import { SQL }    from "bun";
 import { sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/bun-sql"
-import * as schema from "./db/schema"
+
 import 'dotenv/config';
 
 // 1. Inicializar cliente
@@ -20,7 +20,7 @@ async function checkConnection() {
     console.log("⏰ Hora del servidor DB:", result[0].tiempo);
   } catch (error) {
     console.error("❌ ERROR DE CONEXIÓN:");
-    console.error(error.message);
+    console.error(error);
   } finally {
     process.exit(0);
   }
