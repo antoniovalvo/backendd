@@ -5,7 +5,7 @@ import { Value } from 'typebox/value';
 
 
 ///COMMUNE TABLE...
-export const commune = p.pgTable('comune', {
+export const commune = p.pgTable('commune', {
     postalCode: p.integer('postal_code').primaryKey(),
     name: p.text('name').notNull().unique(),
 })
